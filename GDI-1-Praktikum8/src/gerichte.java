@@ -1,5 +1,5 @@
 
-public class Gerichte {
+public class gerichte {
 	
 	String name;
 	float basispreis;

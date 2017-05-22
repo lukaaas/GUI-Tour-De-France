@@ -1,5 +1,5 @@
 
-public class Pizza {
+public class pizza {
 	
 	int backzeit;
 	String [] belag;
