@@ -15,24 +15,20 @@ public class StageWindow {
 		Stage primaryStage = new Stage();
 		BorderPane root = new BorderPane();
 		primaryStage.setTitle("Funktionen");
-		Scene scene = new Scene(root, 800, 500);
-
-		Image image = new Image("file:background.jpg");
-		ImageView view = new ImageView();
-		view.setImage(image);
-		view.setFitHeight(500);
-		view.setFitWidth(800);
-
-		root.getChildren().add(view);
+		Scene scene = new Scene(root, 1000, 500);
+	
+		
 
 		VBox vbox = new VBox();
+		vbox.getStylesheets().add(Main.class.getResource("application.css").toExternalForm());
+		vbox.getStyleClass().add("etappenplan");
+		
 
 		Text text = new Text(DatabaseFunctions.getStageTableString());
 		text.setFont(Font.font("monospace"));
 		vbox.getChildren().add(text);
 
 		root.getChildren().add(vbox);
-
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Etappenplan");
 		primaryStage.show();
